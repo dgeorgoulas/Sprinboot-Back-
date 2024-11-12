@@ -117,6 +117,7 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
                 .authorizeRequests().requestMatchers("/products/**").permitAll()
                 .requestMatchers("/api/test/**").permitAll()
                 .requestMatchers("/h2-console/**").permitAll()
+                .requestMatchers("/images/**").permitAll()
                 .anyRequest().authenticated();
 
         http.authenticationProvider(authenticationProvider());
